@@ -1,14 +1,15 @@
+/* eslint-disable no-useless-rename */
 import { Button } from '@material-ui/core';
 import styled from 'styled-components';
 
-type BotaoBaseProps = {
+type BaseButtonProps = {
   bgColor?: string;
   hoverBgColor?: string;
   clickBgColor?: string;
   textColor?: string;
 };
 
-export const BaseButton = styled(Button)<BotaoBaseProps>`
+export const BaseButton = styled(Button)<BaseButtonProps>`
   min-width: 200px;
 
   &.MuiButton-contained {
@@ -29,7 +30,7 @@ export const BaseButton = styled(Button)<BotaoBaseProps>`
   }
 
   &.MuiButton-root.MuiButton-contained {
-    ${({ textColor: textColor }) => `color: ${textColor}`};
+    ${({ textColor }) => `color: ${textColor}`};
   }
 
   &.MuiButton-root.MuiButton-contained {

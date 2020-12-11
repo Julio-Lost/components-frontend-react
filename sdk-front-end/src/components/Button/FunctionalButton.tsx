@@ -6,14 +6,10 @@ interface Props {
   onClick: () => void;
   children: string;
   color: 'primary' | 'secondary' | string;
-  startIcon?: React.ReactNode;
+  Icon?: React.ReactNode;
 }
 
-export const FunctionalButton = ({
-  children,
-  onClick,
-  color,
-}: PropsWithChildren<Props>) => {
+export const FunctionalButton = ({ children, onClick, color }: PropsWithChildren<Props>) => {
   return (
     <S.FunctionalButton>
       <Button onClick={onClick} color={color}>

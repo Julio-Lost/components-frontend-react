@@ -1,3 +1,6 @@
+/* eslint-disable react/jsx-closing-bracket-location */
+/* eslint-disable prefer-const */
+/* eslint-disable no-else-return */
 import React, { PropsWithChildren } from 'react';
 import Color from 'color';
 import * as S from './styles';

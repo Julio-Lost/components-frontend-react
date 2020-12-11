@@ -4,15 +4,11 @@ import { Meta, Story } from '@storybook/react/types-6-0';
 
 import { Button } from './Button';
 
-export default { color: 'primary' } as Meta;
+export default { title: 'Button', component: Button } as Meta;
 
 export const StoryBookTest: Story = (args) => <Button {...args} />;
 
-/** Alterar os argumentos do componente para o stories */
-
 // StoryBookTest.args = {
-//   title: 'blablabla',
-//   description: 'blablabla',
+//   color: 'secondary',
+//   fullWidth: false,
 // };
-
-/** */
