@@ -8,6 +8,7 @@ interface ButtonProps {
   fullWidth?: boolean;
   Icon?: React.React.Node;
   textColor?: 'inherit' | string;
+  path?: string;
 }
 
 export const Button = ({
