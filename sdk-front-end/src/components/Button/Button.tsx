@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 /* eslint-disable react/jsx-closing-bracket-location */
 /* eslint-disable prefer-const */
 /* eslint-disable no-else-return */
@@ -8,8 +9,8 @@ import * as S from './styles';
 interface ButtonProps {
   color?: 'primary' | 'secondary' | string;
   onClick?: () => void;
-  fullWidth?: boolean;
-  Icon?: React.ReactNode;
+  width?: string;
+  icon?: React.ReactNode;
   textColor?: 'inherit' | string;
   path?: string;
 }
@@ -17,21 +18,15 @@ interface ButtonProps {
 export const Button = ({
   color = 'primary',
   onClick,
-  fullWidth = false,
+  width,
   children,
   path,
-  Icon,
+  icon,
   textColor,
 }: PropsWithChildren<ButtonProps>) => {
   if (color === 'primary' || color === 'secondary') {
     return (
-      <S.BaseButton
-        textColor={textColor}
-        color={color}
-        variant="contained"
-        fullWidth={fullWidth}
-        onClick={onClick}
-        href={path}>
+      <S.BaseButton textColor={textColor} color={color} variant="contained" width={width} onClick={onClick} href={path}>
         {children}
       </S.BaseButton>
     );
@@ -44,15 +39,15 @@ export const Button = ({
 
     return (
       <S.BaseButton
+        icon={icon}
+        onClick={onClick}
         textColor={textoCor}
         bgColor={color}
         hoverBgColor={hovercolor}
         clickBgColor={clickcolor}
         variant="contained"
-        fullWidth={fullWidth}
-        onClick={onClick}
-        href={path}
-        Icon={Icon}>
+        width={width}
+        href={path}>
         {children}
       </S.BaseButton>
     );

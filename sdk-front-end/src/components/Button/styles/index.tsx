@@ -1,3 +1,4 @@
+/* eslint-disable no-unneeded-ternary */
 /* eslint-disable no-useless-rename */
 import { Button } from '@material-ui/core';
 import styled from 'styled-components';
@@ -7,6 +8,7 @@ type BaseButtonProps = {
   hoverBgColor?: string;
   clickBgColor?: string;
   textColor?: string;
+  width?: string;
 };
 
 export const BaseButton = styled(Button)<BaseButtonProps>`
@@ -26,11 +28,11 @@ export const BaseButton = styled(Button)<BaseButtonProps>`
 
   &.MuiButton-root {
     padding: 0 32px;
-    width: 100%;
+    width: ${({ width }) => (width ? width : '100vw')};
   }
 
   &.MuiButton-root.MuiButton-contained {
-    ${({ textColor }) => `color: ${textColor}`};
+    ${({ textColor: textColor }) => `color: ${textColor}`};
   }
 
   &.MuiButton-root.MuiButton-contained {

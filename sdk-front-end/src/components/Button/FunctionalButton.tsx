@@ -3,10 +3,10 @@ import * as S from './styles';
 import { Button } from './Button';
 
 interface Props {
-  onClick: () => void;
   children: string;
+  icon?: React.ReactNode;
   color: 'primary' | 'secondary' | string;
-  Icon?: React.ReactNode;
+  onClick: () => void;
 }
 
 export const FunctionalButton = ({ children, onClick, color }: PropsWithChildren<Props>) => {

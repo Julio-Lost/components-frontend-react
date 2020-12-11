@@ -1,7 +1,7 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
-import { Button } from './Button';
 import * as S from './styles';
+import { Button } from './Button';
 
 interface Props {
   path: string;
@@ -11,13 +11,13 @@ interface Props {
 export const NavigateButton = ({ children, path }: Props) => {
   const history = useHistory();
 
-  function clickHandler() {
+  function handleClick() {
     history.push(path);
   }
 
   return (
     <S.NavigateButton>
-      <Button onClick={clickHandler} path={path}>
+      <Button onClick={handleClick} path={path}>
         {children}
       </Button>
     </S.NavigateButton>

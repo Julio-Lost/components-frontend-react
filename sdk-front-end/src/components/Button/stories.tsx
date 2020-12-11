@@ -9,6 +9,6 @@ export default { title: 'Button', component: Button } as Meta;
 export const StoryBookTest: Story = (args) => <Button {...args} />;
 
 // StoryBookTest.args = {
-//   color: 'secondary',
-//   fullWidth: false,
+//   color: '#E19727',
+//   width: '50vw',
 // };
