@@ -2,14 +2,11 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 
-import { Main } from '.';
+import { Button } from './Button';
 
-export default {
-  title: 'Main',
-  component: Main,
-} as Meta;
+export default { color: 'primary' } as Meta;
 
-export const StoryBookTest: Story = (args) => <Main {...args} />;
+export const StoryBookTest: Story = (args) => <Button {...args} />;
 
 /** Alterar os argumentos do componente para o stories */
 

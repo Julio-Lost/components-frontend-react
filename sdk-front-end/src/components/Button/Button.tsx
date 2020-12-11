@@ -1,12 +1,12 @@
 import React, { PropsWithChildren } from 'react';
-import * as S from './styles';
 import Color from 'color';
+import * as S from './styles';
 
 interface ButtonProps {
   color?: 'primary' | 'secondary' | string;
   onClick?: () => void;
   fullWidth?: boolean;
-  Icon?: React.React.Node;
+  Icon?: React.ReactNode;
   textColor?: 'inherit' | string;
   path?: string;
 }
@@ -22,16 +22,15 @@ export const Button = ({
 }: PropsWithChildren<ButtonProps>) => {
   if (color === 'primary' || color === 'secondary') {
     return (
-      <S.BotaoBase
+      <S.BaseButton
         textColor={textColor}
         color={color}
         variant="contained"
         fullWidth={fullWidth}
         onClick={onClick}
-        href={path}
-      >
+        href={path}>
         {children}
-      </S.BotaoBase>
+      </S.BaseButton>
     );
   } else {
     let corTexto = Color(textColor);
@@ -41,7 +40,7 @@ export const Button = ({
     const clickcolor = corprops.lighten(0.5).hex();
 
     return (
-      <S.BotaoBase
+      <S.BaseButton
         textColor={textoCor}
         bgColor={color}
         hoverBgColor={hovercolor}
@@ -50,10 +49,9 @@ export const Button = ({
         fullWidth={fullWidth}
         onClick={onClick}
         href={path}
-        Icon={Icon}
-      >
+        Icon={Icon}>
         {children}
-      </S.BotaoBase>
+      </S.BaseButton>
     );
   }
 };

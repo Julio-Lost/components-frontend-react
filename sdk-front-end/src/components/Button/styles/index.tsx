@@ -8,15 +8,14 @@ type BotaoBaseProps = {
   textColor?: string;
 };
 
-export const BotaoBase = styled(Button)<BotaoBaseProps>`
+export const BaseButton = styled(Button)<BotaoBaseProps>`
   min-width: 200px;
 
   &.MuiButton-contained {
     ${({ bgColor: bgColor }) => `background-color: ${bgColor}`};
 
     :hover {
-      ${({ hoverBgColor: hoverBgColor }) =>
-        `background-color: ${hoverBgColor}`};
+      ${({ hoverBgColor: hoverBgColor }) => `background-color: ${hoverBgColor}`};
     }
 
     :active {
